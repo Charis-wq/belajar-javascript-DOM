@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1 id="tittle">Hello World!!!</h1>
-    <p>ini paragraf</p>
+    <p class="text">ini paragraf</p>
     <ul>
         <li>item 1</li>
         <li>item 2</li>
@@ -23,7 +23,18 @@
     -quarySelectorAll: mengakses semua element yang sesuai dengan selector CSS
     */
    const tittle = document.getElementById('tittle');
-   console.info(document (tittle));
+   console.info(tittle);
+   const text = document.getElementsByClassName('text');
+   console.info(text);
+   const el = document.getElementsByTagName('li')
+   console.info(el);
+   console.info(el[1]);//kita juga bisa memilih item dengan array
+   const element = document.querySelector('li');
+   console.info(element);
+   const elm = document.querySelectorAll('li');
+   console.info(elm);
+   
+
 </script>
     
 </body>
