@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulasi Element</title>
+    <style>
+        .bg-red{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="conten">
+        <h1>title</h1>
+        <p id="tittle">ini text</p>
+    </div>
+    <p id="paragraph">ini paragraf</p>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+    <script>
+        /*setelah mengakses element anda juga bisa mengubah konten,atribut dan gaya
+        element tersebut
+        -mengubah konten: yaitu elemnt.textContent atau bisa juga menggunakan element.innerHTML
+        -mengubah atribut: yaitu element.satAttribute(attribute, value)
+        -mengubah gaya: yaitu element.style.property = value
+        */
+
+        //mengubah konten
+        const tittle = document.getElementById('tittle');
+        tittle.textContent ='Ini Judul';
+       
+        const conten = document.getElementById('conten');
+        conten.innerHTML = '<h1>INI JUDUL BARU</h1>';
+        //conten.textContent = '<h1>INI JUDUL BARU</h1>'; //jika kita menggunakan textConten tulisan <h1>akan tecbaca
+
+            //mengubah atribut
+            const paragraph = document.getElementById('paragraph');
+            paragraph.setAttribute('class', 'bg-red');
+
+            //mengubah gaya
+            const li = document.querySelectorAll('li');
+            li[1].style.color = 'blue'
+
+
+
+    </script>
+</body>
+</html>

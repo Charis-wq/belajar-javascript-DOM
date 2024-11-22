@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MEnambahkan dan Menghapus</title>
+</head>
+<body>
+    <h1 id="tittle">INI JUDUL</h1>
+    <p id="text">ini teks</p>
+    <ul id="list">
+        <li>item 1</li>
+        <li id="item-2">item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        /*untuk menambhakaneelemnt baru ke DOM anda dpat menggunkan:
+        -createElement(tagName): membuat element baru
+        -appendChild(childNote): menambahkan element sebagai anak dari element lain.
+        -insertBefore(newNode, referenceNode): menyisipkan element sebelum element referensi
+
+        untuk menghapus element dari DOM gunakan:
+        -removeChild(childNode): menghapus element anak
+        -remove(): menghapus element secara langsung
+        */
+
+        //menambhakan element
+        const newDiv = document.createElement('div');
+        newDiv.textContent = 'ini div baru';
+        document.body.appendChild(newDiv);
+
+        const text = document.getElementById('text');
+       // document.body.insertBefore(newDiv,text);
+
+       //menghapus element
+       const parents = document.getElementById('list');
+       const item2 = document.getElementById('item-2')
+       
+       document.body.removeChild(text);
+       parents.removeChild(item2);
+
+       const tittle = document.getElementById('tittle');
+       tittle.remove();
+      // document.body.remove()
+
+
+    </script>
+</body>
+</html>
