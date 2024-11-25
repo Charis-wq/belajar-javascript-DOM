@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+</head>
+<body>
+    <h1>Ini Judul</h1>
+    <p>ini teks</p>
+    <ul id="list">
+        <li id="item-1">item 1</li>
+        <li id="item-2">item 2</li>
+        <li id="item-3">item 3</li>
+    </ul>
+    <script>
+        /*dom traversal adalah proses menjelajahi node di dom tree untuk menemukan element
+        tertentu,anda dapat berpindah ke element anak,orang tua, atay saudara menggunakan berbagai 
+        property dan metode.
+
+        ptoperty Dom Taversal:
+        -parentNode: untuk mendapatkan elemnt orang tua
+        -childNode: untuk mendaptkan Nodelist dari semua anak element
+        -firstchild/lastChild: untuk mendapatkan anak pertama/terakhir
+        -nextSibling/previousSubling: untuk mendapatkan element saudara berikutnya/sebelumnya
+        */
+
+        const item1 = document.getElementById('item-1');
+        const item2 = document.getElementById('item-2');
+        const list = document.getElementById('list');
+
+        console.info(item1.parentNode);
+        console.info(item1.parentElement);
+
+        console.info(list.children);
+        console.info(list.firstElementChild);//gunakan element jika lebih spesifik ke child yang di maksud
+        console.info(list.lastElementChild);
+        console.info(list.childNodes);
+
+        console.info(item2.nextSibling);//ini akan masuk ke teks
+        console.info(item2.nextElementSibling);//ini akan masuk ke item-3
+        console.info(item2.previousSibling);
+        console.info(item2.previousElementSibling;
+
+
+
+    </script>
+</body>
+</html>
